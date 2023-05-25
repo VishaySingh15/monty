@@ -65,3 +65,24 @@ void _pop(stack_t **stack, unsigned int line_number)
 		free(current);
 	}
 }
+
+void _swap(stack_t **stack, unsigned int line_number)
+{
+	stack_t *current, *first;
+
+	if (*stack && (*stack)->next)
+	{
+		current = *stack;
+		first = current->next;
+		first->prev = NULL;
+		current->next = first->next;
+		first->next = current;
+		current->prev = first;
+		*stack = first;
+	}
+	else
+	{
+		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
+		global_vars.opcode_err = 1;
+	}
+}
