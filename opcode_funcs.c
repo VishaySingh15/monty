@@ -1,5 +1,11 @@
 #include "monty.h"
 
+/**
+ * _push - adds item to top of stack
+ * @stack: pointer to first element in stack
+ * @line_number: line number of code
+ * Return: none
+ */
 void _push(stack_t **stack, unsigned int line_number)
 {
 	int opcode_argint;
@@ -18,6 +24,12 @@ void _push(stack_t **stack, unsigned int line_number)
 	add_dnodeint(stack, opcode_argint);
 }
 
+/**
+ * _pall - prints items from stack
+ * @stack: pointer to first element in stack
+ * @line_number: line number of code
+ * Return: none
+ */
 void _pall(stack_t **stack, unsigned int line_number)
 {
 	stack_t *current;
@@ -33,6 +45,12 @@ void _pall(stack_t **stack, unsigned int line_number)
 	}
 }
 
+/**
+ * _pint - prints top item from stack
+ * @stack: pointer to first element in stack
+ * @line_number: line number of code
+ * Return: none
+ */
 void _pint(stack_t **stack, unsigned int line_number)
 {
 	if (*stack)
@@ -46,6 +64,12 @@ void _pint(stack_t **stack, unsigned int line_number)
 	}
 }
 
+/**
+ * _pop - removes top item
+ * @stack: pointer to first element in stack
+ * @line_number: line number of code
+ * Return: none
+ */
 void _pop(stack_t **stack, unsigned int line_number)
 {
 	stack_t *current, *next;
@@ -66,6 +90,12 @@ void _pop(stack_t **stack, unsigned int line_number)
 	}
 }
 
+/**
+ * _swap - swaps top 2 items in stack
+ * @stack: pointer to first element in stack
+ * @line_number: line number of code
+ * Return: none
+ */
 void _swap(stack_t **stack, unsigned int line_number)
 {
 	stack_t *current, *first;

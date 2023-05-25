@@ -2,6 +2,13 @@
 
 glob_t global_vars;
 
+/**
+ * execute_opcode - tokenises each line to extract opcode
+ * @code_line: each line of code
+ * @LIFO: stack head
+ * @line_number: line number of code
+ * Return: negative if fails, else positive
+ */
 int execute_opcode(char *code_line, stack_t **LIFO, unsigned int line_number)
 {
 	char *opcode;
@@ -23,6 +30,11 @@ int execute_opcode(char *code_line, stack_t **LIFO, unsigned int line_number)
 	return (1);
 }
 
+/**
+ * valid_opcode - checks if opcode is a valid command
+ * @opcode - opcode string
+ * Return: the function to execute opcode
+ */
 void (*valid_opcode(char *opcode))(stack_t **stack, unsigned int line_number)
 {
 	instruction_t opcodes[] = {

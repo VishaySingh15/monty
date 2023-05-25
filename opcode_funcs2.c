@@ -1,5 +1,11 @@
 #include "monty.h"
 
+/**
+ * _add - adds top 2 items in stack
+ * @stack: pointer to first element in stack
+ * @line_number: line number of code
+ * Return: none
+ */
 void _add(stack_t **stack, unsigned int line_number)
 {
 	stack_t *first, *second;
@@ -19,6 +25,12 @@ void _add(stack_t **stack, unsigned int line_number)
 	}
 }
 
+/**
+ * _nop - does nothing
+ * @stack: pointer to first element in stack
+ * @line_number: line number of code
+ * Return: none
+ */
 void _nop(stack_t **stack, unsigned int line_number)
 {
 	if (stack && line_number)

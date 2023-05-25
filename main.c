@@ -1,5 +1,11 @@
 #include "monty.h"
 
+/**
+ * main - reads from monty file
+ * @argc: number of args passed
+ * @argv: array of args
+ * Return: EXIT_FAILURE if failure else 0
+ */
 int main(int argc, char **argv)
 {
 	FILE *monty_file;
@@ -48,6 +54,11 @@ int main(int argc, char **argv)
 	return (0);
 }
 
+/**
+ * open_file - attempts to open a file
+ * @filename: name of file
+ * Return: file open status
+ */
 FILE *open_file(char *filename)
 {
 	return (fopen(filename, "r"));
