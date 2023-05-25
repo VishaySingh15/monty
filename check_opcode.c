@@ -27,7 +27,7 @@ void (*valid_opcode(char *opcode))(stack_t **stack, unsigned int line_number)
 {
 	instruction_t opcodes[] = {
 		{"push", _push}, {"pall", _pall},
-		{NULL, NULL},
+		{"pint", _pint}, {NULL, NULL},
 	};
 	int count = 0;
 

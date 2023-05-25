@@ -51,6 +51,7 @@ int execute_opcode(char *code_line, stack_t **LIFO, unsigned int line_number);
 void (*valid_opcode(char *opcode))(stack_t **stack, unsigned int line_number);
 void _push(stack_t **stack, unsigned int line_number);
 void _pall(stack_t **stack, unsigned int line_number);
+void _pint(stack_t **stack, unsigned int line_number);
 stack_t *add_dnodeint(stack_t **head, int n);
 
 #endif

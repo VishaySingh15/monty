@@ -32,3 +32,16 @@ void _pall(stack_t **stack, unsigned int line_number)
 		}
 	}
 }
+
+void _pint(stack_t **stack, unsigned int line_number)
+{
+	if (*stack && line_number)
+	{
+		printf("%d\n", (*stack)->n);
+	}
+	else
+	{
+		fprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
+		global_vars.opcode_err = 1;
+	}
+}
