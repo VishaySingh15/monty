@@ -29,7 +29,7 @@ void (*valid_opcode(char *opcode))(stack_t **stack, unsigned int line_number)
 		{"push", _push}, {"pall", _pall},
 		{"pint", _pint}, {"pop", _pop}, 
 		{"swap", _swap}, {"add", _add}, 
-		{NULL, NULL},
+		{"nop", _nop}, {NULL, NULL},
 	};
 	int count = 0;
 

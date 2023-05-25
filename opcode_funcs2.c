@@ -18,3 +18,11 @@ void _add(stack_t **stack, unsigned int line_number)
 		global_vars.opcode_err = 1;
 	}
 }
+
+void _nop(stack_t **stack, unsigned int line_number)
+{
+	if (stack && line_number)
+	{
+		line_number++;
+	}
+}
