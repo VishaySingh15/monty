@@ -8,6 +8,7 @@ int main(int argc, char **argv)
 	unsigned int line_number = 0;
 	int opcode_err;
 	stack_t *LIFO;
+	stack_t *current;
 
 	if (argc != 2)
 	{
@@ -38,7 +39,12 @@ int main(int argc, char **argv)
 	if (code_line)
 		free(code_line);
 	fclose(monty_file);
-
+	while (LIFO)
+	{
+		current = LIFO;
+		LIFO = LIFO->next;
+		free(current);
+	}
 	return (0);
 }
 
